@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+*.log
+.DS_Store
+Thumbs.db
+
+# Large press kit — exceeds GitHub's 100 MB file limit
+press/Presskit-EN_DE.zip
