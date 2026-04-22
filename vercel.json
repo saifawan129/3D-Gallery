@@ -1,0 +1,28 @@
+{
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "destination": "https://web.archive.org/web/20220101000000id_/https://shutdown.gallery/:path*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/:path*.js",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/assets/:path*.css",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/:path*.html",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
+      ]
+    }
+  ]
+}
